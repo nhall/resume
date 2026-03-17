@@ -29,6 +29,27 @@ body {
 	@media (prefers-color-scheme: dark) {
 		background-color: rgba($pink, 0.4);
 	}
+
+	@media (prefers-contrast: more) {
+		background-color: rgba($blue, 0.4);
+	}
+
+	@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+		background-color: rgba($pink, 0.6);
+	}
+}
+
+body {
+
+	@media (prefers-contrast: more) {
+		color: #000;
+		background-color: #fff;
+	}
+
+	@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+		color: #fff;
+		background-color: #000;
+	}
 }
 
 .resume {
@@ -107,6 +128,15 @@ body {
 		content: '';
 		opacity: 0.1;
 		pointer-events: none;
+
+		@media (prefers-contrast: more) {
+			opacity: 0.4;
+		}
+
+		@media (forced-colors: active) {
+			background-color: CanvasText;
+			opacity: 1;
+		}
 	}
 }
 
