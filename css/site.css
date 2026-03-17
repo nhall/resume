@@ -1170,12 +1170,12 @@ template {
 ============================================================================= */
 body {
   color: #393939;
-  background-color: #F5F8FA;
+  background-color: #f5f8fa;
 }
 @media (prefers-color-scheme: dark) {
   body {
     color: #fff;
-    background-color: #1E1E1E;
+    background-color: #1e1e1e;
   }
 }
 @media print {
@@ -1262,30 +1262,27 @@ body {
   margin-bottom: 80px;
 }
 .page a {
-  -webkit-box-shadow: 0 1px 0 var(--accent);
-          box-shadow: 0 1px 0 var(--accent);
   color: var(--accent);
-  text-decoration: none;
-  -webkit-transition: color 0.25s, -webkit-box-shadow 0.25s;
-  transition: color 0.25s, -webkit-box-shadow 0.25s;
-  transition: box-shadow 0.25s, color 0.25s;
-  transition: box-shadow 0.25s, color 0.25s, -webkit-box-shadow 0.25s;
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--accent);
+          text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  -webkit-transition: color 0.25s, -webkit-text-decoration-color 0.25s;
+  transition: color 0.25s, -webkit-text-decoration-color 0.25s;
+  transition: text-decoration-color 0.25s, color 0.25s;
+  transition: text-decoration-color 0.25s, color 0.25s, -webkit-text-decoration-color 0.25s;
 }
 @media print {
   .page a {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    text-decoration: none;
     color: inherit;
   }
 }
 .page a:hover, .page a:focus {
-  -webkit-box-shadow: 0 1px 0 currentColor;
-          box-shadow: 0 1px 0 currentColor;
+  -webkit-text-decoration-color: currentColor;
+          text-decoration-color: currentColor;
   color: inherit;
-}
-
-[tabindex="-1"] {
-  outline: none;
 }
 
 /* Header
@@ -1450,24 +1447,21 @@ body {
   color: var(--accent);
   display: block;
   padding: 10px 20px;
-  text-decoration: none;
-  -webkit-transition: color 0.25s, -webkit-box-shadow 0.25s;
-  transition: color 0.25s, -webkit-box-shadow 0.25s;
-  transition: box-shadow 0.25s, color 0.25s;
-  transition: box-shadow 0.25s, color 0.25s, -webkit-box-shadow 0.25s;
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--accent);
+          text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  -webkit-transition: color 0.25s, -webkit-text-decoration-color 0.25s;
+  transition: color 0.25s, -webkit-text-decoration-color 0.25s;
+  transition: text-decoration-color 0.25s, color 0.25s;
+  transition: text-decoration-color 0.25s, color 0.25s, -webkit-text-decoration-color 0.25s;
 }
 .connect_link:hover, .connect_link:focus {
+  -webkit-text-decoration-color: currentColor;
+          text-decoration-color: currentColor;
   color: inherit;
 }
 .connect_link:first-child {
   margin-left: -20px;
-}
-
-.connect_link_label {
-  -webkit-box-shadow: 0 1px 0 var(--accent);
-          box-shadow: 0 1px 0 var(--accent);
-}
-.connect_link:hover .connect_link_label, .connect_link:focus .connect_link_label {
-  -webkit-box-shadow: 0 1px 0 currentColor;
-          box-shadow: 0 1px 0 currentColor;
 }

@@ -3,12 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{{ name }}'s Professional Resume</title>
-		<meta name="description" content="">
+		<meta name="description" content="Professional resume of {{ name }}, a front-end web developer and digital accessibility specialist in Baltimore, Maryland.">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<meta property="og:title" content="{{ name }}">
 		<meta property="og:type" content="profile">
-		<meta property="og:url" content="">
 		<meta property="og:image" content="images/og.png">
 
 		<link rel="manifest" href="site.webmanifest">
@@ -20,98 +19,96 @@
 
 		<script type="application/ld+json">
 			{
-				"@context": "http://schema.org",
+				"@context": "https://schema.org",
 				"@type": "Person",
-				"@id": "#nick",
 				"name": "{{ name }}",
-				"image": "",
-				"jobTitle": "Senior Developer",
-				"description": "Hi, I am a front-end web developer living in Baltimore, Maryland.",
-				"contactPoint": [
+				"jobTitle": "Digital Accessibility Specialist",
+				"description": "Front-end web developer and digital accessibility specialist in Baltimore, Maryland.",
+				"url": "https://nhall.github.io/resume/",
+				"sameAs": [
+					"https://www.linkedin.com/in/nhall/",
+					"https://github.com/nhall"
+				],
+				"worksFor": {
+					"@type": "Organization",
+					"name": "Fastspot"
+				},
+				"hasOccupation": [
 					{
-						"@type": "ContactPoint",
-						"contactType": "LinkedIn",
-						"identifier": "nhall",
-						"image": "//media-exp1.licdn.com/dms/image/C5103AQEwHsz4_MyGLQ/profile-displayphoto-shrink_400_400/0?e=1601510400&v=beta&t=QRDaFyT6xAU12ez5zuOcYpb1IarV0t8Dz6FTC2pLqKc",
-						"url": "//www.linkedin.com/in/nhall/"
+						"@type": "EmployeeRole",
+						"roleName": "Digital Accessibility",
+						"startDate": "2025",
+						"worksFor": {
+							"@type": "Organization",
+							"name": "Fastspot"
+						}
 					},
 					{
-						"@type": "ContactPoint",
-						"contactType": "GitHub",
-						"identifier": "nhall",
-						"image": "//avatars1.githubusercontent.com/u/1731046?s=460&v=4",
-						"url": "//github.com/nhall"
+						"@type": "EmployeeRole",
+						"roleName": "Senior Developer",
+						"startDate": "2014-09",
+						"worksFor": {
+							"@type": "Organization",
+							"name": "Fastspot"
+						}
+					},
+					{
+						"@type": "EmployeeRole",
+						"roleName": "Web Production Manager",
+						"startDate": "2012-08",
+						"endDate": "2014-09",
+						"worksFor": {
+							"@type": "Organization",
+							"name": "Finalsite",
+							"sameAs": "https://www.finalsite.com/"
+						}
+					},
+					{
+						"@type": "EmployeeRole",
+						"roleName": "Web Producer",
+						"startDate": "2008-06",
+						"endDate": "2012-08",
+						"worksFor": {
+							"@type": "Organization",
+							"name": "Silverpoint",
+							"sameAs": "https://www.finalsite.com/"
+						}
+					},
+					{
+						"@type": "EmployeeRole",
+						"roleName": "Web Designer",
+						"startDate": "2004-06",
+						"endDate": "2008-06",
+						"worksFor": {
+							"@type": "Organization",
+							"name": "G.1440 LLC"
+						}
 					}
 				],
 				"hasCredential": [
 					{
 						"@type": "EducationalOccupationalCredential",
+						"credentialCategory": "certification",
+						"name": "Certified Professional in Accessibility Core Competencies (CPACC)",
+						"url": "https://www.accessibilityassociation.org/cpacccertification"
+					},
+					{
+						"@type": "EducationalOccupationalCredential",
 						"credentialCategory": "degree",
-						"educationalLevel": "Bachelors of Science",
+						"educationalLevel": "Bachelor of Science",
 						"dateCreated": "2004-05",
 						"recognizedBy": {
 							"@type": "CollegeOrUniversity",
 							"name": "Towson University",
-							"sameAs": "//www.towson.edu/"
+							"sameAs": "https://www.towson.edu/"
 						}
 					}
 				],
-				"hasOccupation": {
-					"@type": "EmployeeRole",
-					"roleName": "Senior Developer",
-					"startDate": "2014-09"
-				},
-				"worksFor": {
-					"@type": "Organization",
-					"name": "Fastspot"
-				},
-				"alumniOf": [
-					{
-						"@type": "Organization",
-						"name": "Finalsite",
-						"sameAs": "//www.finalsite.com/",
-						"employee": {
-							"@type": "Person",
-							"hasOccupation": {
-								"@type": "EmployeeRole",
-								"roleName": "Web Production Manager",
-								"startDate": "2012-08",
-								"endDate": "2014-09"
-							},
-							"sameAs": "#nick"
-						}
-					},
-					{
-						"@type": "Organization",
-						"name": "Silverpoint (now Finalsite)",
-						"sameAs": "//www.finalsite.com/",
-						"employee": {
-							"@type": "Person",
-							"hasOccupation": {
-								"@type": "EmployeeRole",
-								"roleName": "Web Producer",
-								"startDate": "2008-06",
-								"endDate": "2012-08"
-							},
-							"sameAs": "#nick"
-						}
-					},
-					{
-						"@type": "Organization",
-						"name": "G1440",
-						"sameAs": "//www.g1440.com/",
-						"employee": {
-							"@type": "Person",
-							"hasOccupation": {
-								"@type": "EmployeeRole",
-								"roleName": "Web Designer",
-								"startDate": "2004-06",
-								"endDate": "2008-06"
-							},
-							"sameAs": "#nick"
-						}
-					}
-				]
+				"alumniOf": {
+					"@type": "CollegeOrUniversity",
+					"name": "Towson University",
+					"sameAs": "https://www.towson.edu/"
+				}
 			}
 		</script>
 
@@ -164,6 +161,7 @@
 							{% for point in education.points %}
 							<em>{{ point }}</em>
 							{% endfor %}
+							</p>
 						</div>
 					</div>
 				</section>
@@ -228,11 +226,6 @@
 		</div>
 
 		<link rel="stylesheet" href="css/site.css">
-
-		<script>
-			window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-			ga('create', 'UA-173943755-1', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-		</script>
-		<script src="//www.google-analytics.com/analytics.js" async></script>
+		<script data-goatcounter="https://nhall.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 	</body>
 </html>

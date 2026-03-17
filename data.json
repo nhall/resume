@@ -2,6 +2,19 @@
 	"name": "Nicholas Hall",
 	"jobs": [
 		{
+			"position": "Digital Accessibility",
+			"company": "Fastspot",
+			"location": "Baltimore, Md",
+			"time": "2025-Present",
+			"points": [
+				"Spearhead company-wide accessibility practice, establishing standards, automated testing, and developer training",
+				"Consult directly with clients and their internal accessibility teams to assess compliance, define remediation strategies, and support VPAT documentation",
+				"Remediate front-end accessibility issues across multiple codebases, scanning tools, and frameworks, ranging from surface-level content fixes to complex structural overhauls",
+				"Translate complex or unconventional designs into fully accessible implementations without compromising creativity or user experience",
+				"Continuously build and share accessibility knowledge through self-directed research, industry conferences, and webinars, ensuring the team stays current on WCAG and ADA developments"
+			]
+		},
+		{
 			"position": "Senior Developer",
 			"company": "Fastspot",
 			"location": "Baltimore, Md",
@@ -14,7 +27,6 @@
 				"Worked with the product team to identify potential issues with scope, accessibility, and project timeline",
 				"Assist with both client pitches and trainings",
 				"Teamed up with design and strategy to discover creative solutions to complex problems while achieving desired user experience and sense of emotion",
-				"Led company's accessibility efforts including teaching principles, adhering to standards and guidelines, working with third-party consultants and developing an automated testing plan",
 				"Volunteered time to speak with aspiring developers at both college and high school levels"
 			]
 		},
