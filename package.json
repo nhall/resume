@@ -9,11 +9,13 @@
 	},
 	"scripts": {
 		"test": "npx playwright test",
-		"test:headed": "npx playwright test --headed"
+		"test:headed": "npx playwright test --headed",
+		"release": "release-it"
 	},
 	"devDependencies": {
 		"@axe-core/playwright": "^4.11.1",
 		"@playwright/test": "^1.58.2",
+		"@release-it/conventional-changelog": "^10.0.6",
 		"@siteimprove/alfa-playwright": "^0.81.4",
 		"@siteimprove/alfa-test-utils": "^0.81.4",
 		"async": "3.0.1",
@@ -44,6 +46,7 @@
 		"normalize.css": "8.0.1",
 		"path": "0.12.7",
 		"postcss-pxtorem": "4.0.1",
+		"release-it": "^19.2.4",
 		"require-reload": "0.2.2",
 		"sass": "^1.98.0",
 		"serve": "^14.2.6",
