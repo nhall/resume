@@ -8,6 +8,9 @@
 		"url": "git@github.com:nhall/resume.git"
 	},
 	"scripts": {
+		"gulp": "gulp",
+		"build": "gulp build",
+		"dev": "gulp dev",
 		"test": "npx playwright test",
 		"test:headed": "npx playwright test --headed",
 		"release": "release-it"
