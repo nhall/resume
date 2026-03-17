@@ -8,7 +8,6 @@ const argv = require('yargs').argv;
 const newer = require('gulp-newer');
 const twig = require('gulp-twig');
 const htmlbeautify = require('gulp-html-beautify');
-const sassGlob = require('gulp-sass-glob');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const cssnano = require('gulp-cssnano');
@@ -62,9 +61,8 @@ function prettyhtml() {
 
 function compileSass() {
 	return src(packageJSON.css)
-		.pipe(sassGlob())
 		.pipe(sass({
-			silenceDeprecations: ['legacy-js-api', 'import', 'slash-div']
+			silenceDeprecations: ['legacy-js-api']
 		}).on('error', sass.logError))
 		.pipe(postcss([
 			require('autoprefixer')()
