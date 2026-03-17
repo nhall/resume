@@ -308,6 +308,8 @@ template {
   display: none;
 }
 
+/* Utility
+============================================================================= */
 /* ==========================================================================
 	Components
 ============================================================================= */
@@ -1268,10 +1270,17 @@ body {
     color: inherit;
   }
 }
-.page a:hover, .page a:focus {
+.page a:focus-visible {
   -webkit-text-decoration-color: currentColor;
           text-decoration-color: currentColor;
   color: inherit;
+}
+@media (hover: hover) {
+  .page a:hover {
+    -webkit-text-decoration-color: currentColor;
+            text-decoration-color: currentColor;
+    color: inherit;
+  }
 }
 
 /* Header
@@ -1439,10 +1448,17 @@ body {
   transition: text-decoration-color 0.25s, color 0.25s;
   transition: text-decoration-color 0.25s, color 0.25s, -webkit-text-decoration-color 0.25s;
 }
-.connect_link:hover, .connect_link:focus {
+.connect_link:focus-visible {
   -webkit-text-decoration-color: currentColor;
           text-decoration-color: currentColor;
   color: inherit;
+}
+@media (hover: hover) {
+  .connect_link:hover {
+    -webkit-text-decoration-color: currentColor;
+            text-decoration-color: currentColor;
+    color: inherit;
+  }
 }
 .connect_link:first-child {
   margin-left: -20px;

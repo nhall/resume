@@ -147,8 +147,7 @@ body {
 		text-decoration-color $base_speed,
 		color $base_speed;
 
-	&:hover,
-	&:focus {
+	@include hover {
 		text-decoration-color: currentColor;
 		color: inherit;
 	}
@@ -158,4 +157,5 @@ body {
 	}
 }
 
-.connect_link_label {}
+.connect_link_label {
+}

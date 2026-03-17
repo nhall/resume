@@ -198,8 +198,7 @@
 		color: inherit;
 	}
 
-	&:hover,
-	&:focus {
+	@include hover {
 		text-decoration-color: currentColor;
 		color: inherit;
 	}
@@ -358,5 +357,22 @@
 
 	@media print {
 		margin: 4px 0;
+	}
+}
+
+/* Utility
+============================================================================= */
+
+@mixin hover($focus: true) {
+	@if $focus {
+		&:focus-visible {
+			@content;
+		}
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			@content;
+		}
 	}
 }
