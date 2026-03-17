@@ -1,9 +1,6 @@
 const { src, dest, lastRun, series, parallel, watch } = require('gulp');
 const reload = require('require-reload')(require);
-const async = require('async');
 const fs = require('fs');
-const path = require('path');
-const globby = require('globby');
 const browserSync = require('browser-sync').create();
 const del = require('del');
 const gulpif = require('gulp-if');
