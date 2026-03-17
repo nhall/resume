@@ -27,7 +27,7 @@
     "gulp-postcss": "8.0.0",
     "gulp-real-favicon": "0.3.2",
     "gulp-rename": "1.4.0",
-    "gulp-sass": "4.0.2",
+    "gulp-sass": "^5.1.0",
     "gulp-sass-glob": "1.0.9",
     "gulp-svg-sprite": "1.5.0",
     "gulp-twig": "1.2.0",
@@ -39,6 +39,7 @@
     "path": "0.12.7",
     "postcss-pxtorem": "4.0.1",
     "require-reload": "0.2.2",
+    "sass": "^1.98.0",
     "what-input": "5.2.1",
     "yargs": "13.2.4"
   },

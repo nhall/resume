@@ -24,8 +24,6 @@
 				"@type": "Person",
 				"@id": "#nick",
 				"name": "{{ name }}",
-				"email": "{{ email }}",
-				"telephone": "{{ phone }}",
 				"image": "",
 				"jobTitle": "Senior Developer",
 				"description": "Hi, I am a front-end web developer living in Baltimore, Maryland.",
@@ -120,14 +118,6 @@
 		<div class="resume">
 			<header class="header">
 				<h1 class="header_title">{{ name }}</h1>
-				<div class="header_meta">
-					<p class="header_meta_phone">
-						<a class="header_meta_phone_link" href="tel:{{ phone }}">{{ phone }}</a>
-					</p>
-					<p class="header_meta_email">
-						<a class="header_meta_email_link" href="mailto:{{ email }}">{{ email }}</a>
-					</p>
-				</div>
 			</header>
 			<main class="page">
 				<section class="jobs">
@@ -199,7 +189,7 @@
 							<div class="achievement_inner">
 								<div class="achievement_header">
 									<h3 class="achievement_site" id="achievements_site_{{ loop.index }}">
-										<a class="achievement_link" href="{{ achievement.url }}" target="_blank" rel="noopener">{{ achievement.site }}</a>
+										<a class="achievement_link" href="{{ achievement.url }}" target="_blank" rel="noopener nofollow noreferrer">{{ achievement.site }}</a>
 									</h3>
 								</div>
 								<ul class="awards" aria-labelledby="achievements_site_{{ loop.index }} achievements_title">
@@ -226,7 +216,7 @@
 						<ul class="connect_list" aria-labelledby="connect_title">
 							{% for link in links %}
 							<li class="connect_item">
-								<a class="connect_link" href="{{ link.url }}" target="_blank" rel="noopener">
+								<a class="connect_link" href="{{ link.url }}" target="_blank" rel="noopener nofollow noreferrer">
 									<span class="connect_link_label">{{ link.name }}</span>
 								</a>
 							</li>

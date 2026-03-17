@@ -83,29 +83,6 @@ body {
 	}
 }
 
-.header_meta {
-
-	@media screen {
-		display: none;
-	}
-
-	a {
-		@include page_link;
-	}
-}
-
-.header_meta_phone {
-	margin: 0;
-}
-
-.header_meta_phone_link {}
-
-.header_meta_email {
-	margin: 0;
-}
-
-.header_meta_email_link {}
-
 
 /* Footer
 ============================================================================= */
