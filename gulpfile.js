@@ -66,7 +66,9 @@ function prettyhtml() {
 function compileSass() {
 	return src(packageJSON.css)
 		.pipe(sassGlob())
-		.pipe(sass().on('error', sass.logError))
+		.pipe(sass({
+			silenceDeprecations: ['legacy-js-api', 'import', 'slash-div']
+		}).on('error', sass.logError))
 		.pipe(postcss([
 			require('autoprefixer')()
 		]))
