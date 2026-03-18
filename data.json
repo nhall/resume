@@ -20,14 +20,13 @@
 			"location": "Baltimore, Md",
 			"time": "2014-Present",
 			"points": [
+				"Built websites for clients ranging from Fortune 500 companies to startups, across higher education, energy, and arts sectors",
+				"Contributed to award-winning, fully accessible work for Ivy League institutions, top liberal arts colleges, and Fortune 500 clients, recognized by the Webby Awards, UCDA, CASE, and Davey Awards",
 				"Created an internal codebase focused on standardizing solutions and reducing the time needed to start new projects",
-				"Interviewed, onboarded, trained and mentored new developers",
-				"Developed, documented and maintained code standards making it easier to assist, review and debug each other’s work",
-				"Defined and documented functional requirements",
+				"Interviewed, onboarded, trained, and mentored new developers",
+				"Developed, documented, and maintained code standards, making it easier to assist, review, and debug each other's work",
 				"Worked with the product team to identify potential issues with scope, accessibility, and project timeline",
-				"Assist with both client pitches and trainings",
-				"Teamed up with design and strategy to discover creative solutions to complex problems while achieving the desired user experience and sense of emotion",
-				"Volunteered time to speak with aspiring developers at both college and high school levels"
+				"Teamed up with design and strategy to discover creative solutions to complex problems while achieving the desired user experience and sense of emotion"
 			]
 		},
 		{
@@ -36,11 +35,11 @@
 			"location": "Baltimore, Md",
 			"time": "2012-2014",
 			"points": [
-				"Managed team of local and remote developers",
-				"Allocated department resources based on individual strengths and areas for growth",
-				"Led department with process and workflow improvements to increase efficiencies while maintaining a high quality of work",
-				"Interviewed and made hiring decisions for both interns and full-time employees in the development department",
-				"Conducted individual performance reviews and reported career accomplishments to higher levels of management"
+				"Led department-wide process and workflow improvements that increased efficiency without sacrificing quality",
+				"Implemented a new project management system to improve communication and accountability across teams",
+				"Managed a team of local and remote developers, allocating resources based on individual strengths and growth areas",
+				"Drove hiring decisions for interns and full-time developers, including interviews and onboarding",
+				"Conducted performance reviews and communicated career accomplishments to senior management"
 			]
 		},
 		{
@@ -49,9 +48,10 @@
 			"location": "Baltimore, Md",
 			"time": "2008-2012",
 			"points": [
-				"Involved in all aspects of site production from design concepts to post-launch maintenance",
-				"Championed progressive enhancements to adopt advanced front-end techniques resulting in development efficiencies and a better user experience",
-				"Liaison between front-end and back-end development teams to ensure the best possible product",
+				"Managed all aspects of site production from design concepts through post-launch maintenance",
+				"Built and maintained websites for clients in higher education, energy, and arts sectors",
+				"Championed progressive enhancement techniques that improved development efficiency and user experience",
+				"Served as liaison between front-end and back-end teams to ensure cohesive, high-quality output",
 				"Participated in remote projects for accelerated project schedules (ask me about Bucharest or Honolulu)"
 			]
 		},
@@ -61,10 +61,9 @@
 			"location": "Baltimore, Md",
 			"time": "2004-2008",
 			"points": [
-				"Primary front-end developer for complex CSS layouts",
-				"Prototyped web applications with CSS, HTML, and JavaScript",
-				"Performed site maintenance with both in-house and open source CMS tools",
-				"Ensured 508 & ADA compliance of new builds"
+				"Served as primary front-end developer for complex CSS layouts and web application prototypes",
+				"Built and maintained sites using both proprietary and open source CMS platforms",
+				"Ensured 508 and ADA compliance on all new builds"
 			]
 		}
 	],
@@ -86,7 +85,7 @@
 		{
 			"site": "Virginia Commonwealth University School of the Arts (VCUarts)",
 			"url": "https://arts.vcu.edu/",
-			"awards": ["2024 UCDA Design Competition - Excellence - Website Redesign", "2024 UCDA Design Competition - Judges Choice - All Digital", "Webby - Official Winner, School/University"]
+			"awards": ["2024 UCDA Design Competition - Excellence - Website Redesign", "2024 UCDA Design Competition - Judges' Choice - All Digital", "Webby - Official Winner, School/University"]
 		},
 		{
 			"site": "Kenyon College",
