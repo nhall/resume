@@ -1,5 +1,6 @@
 @use '../base/setup' as *;
 @use '../base/mixins' as *;
+@use '../base/functions' as *;
 
 /* ==========================================================================
 	Structure
@@ -40,7 +41,6 @@ body {
 }
 
 body {
-
 	@media (prefers-contrast: more) {
 		color: #000;
 		background-color: #fff;
@@ -56,6 +56,8 @@ body {
 	@include body_text;
 
 	--accent: #{$blue};
+
+	min-inline-size: 320px;
 
 	font-size: 16px;
 	line-height: 1.5;
@@ -82,14 +84,11 @@ body {
 .header {
 	@include landmark_padding;
 
-	margin: 20px 0;
-
-	@media #{$min_xl} {
-		margin-bottom: 40px;
-	}
+	margin-block: base_clamp(20px, 40px);
+	margin-inline: 0;
 
 	@media print {
-		margin: 0 0 30px;
+		margin-block: 0 30px;
 	}
 }
 
@@ -109,8 +108,7 @@ body {
 .footer {
 	position: relative;
 
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-block: 20px;
 
 	@media print {
 		display: none;
@@ -150,10 +148,11 @@ body {
 }
 
 .connect_title {
-	@include body_text;
+	@include small_text;
 
 	font-weight: normal;
-	margin: 0 20px 0 0;
+	margin: 0;
+	margin-inline-end: 20px;
 }
 
 .connect_list {

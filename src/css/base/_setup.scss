@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 // =============================================================================
 // Setup
 // =============================================================================
@@ -6,7 +8,7 @@
 // =============================================================================
 
 @mixin sans($weight: null) {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 	@if $weight != null {
 		font-weight: $weight;
@@ -14,42 +16,48 @@
 }
 
 @mixin serif($weight: null) {
-	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
 
 	@if $weight != null {
 		font-weight: $weight;
 	}
 }
 
-
 // Colors
 // =============================================================================
 
-$gray_light: #FAFAFA;
+$gray_light: #fafafa;
 $gray_dark: #393939;
-$blue: #0065BD;
-$pink: #E8AAA1;
-
+$blue: #0065bd;
+$pink: #e8aaa1;
 
 // Misc
 // =============================================================================
 
 $base_speed: 0.25s;
 
-
 // Media Queries
 // =============================================================================
 
-$mq_min_xs: 320;
-$mq_min_sm: 500;
-$mq_min_md: 740;
-$mq_min_lg: 980;
-$mq_min_xl: 1220;
-$mq_min_xxl: 1460;
+$breakpoints: (
+	'xs': 320,
+	'sm': 500,
+	'md': 740,
+	'lg': 980,
+	'xl': 1220,
+	'xxl': 1460
+);
 
-$min_xs: "(min-width:" + ($mq_min_xs * 1px) + ")";
-$min_sm: "(min-width:" + ($mq_min_sm * 1px) + ")";
-$min_md: "(min-width:" + ($mq_min_md * 1px) + ")";
-$min_lg: "(min-width:" + ($mq_min_lg * 1px) + ")";
-$min_xl: "(min-width:" + ($mq_min_xl * 1px) + ")";
-$min_xxl: "(min-width:" + ($mq_min_xxl * 1px) + ")";
+$mq_min_xs: map.get($breakpoints, 'xs');
+$mq_min_sm: map.get($breakpoints, 'sm');
+$mq_min_md: map.get($breakpoints, 'md');
+$mq_min_lg: map.get($breakpoints, 'lg');
+$mq_min_xl: map.get($breakpoints, 'xl');
+$mq_min_xxl: map.get($breakpoints, 'xxl');
+
+$min_xs: '(min-width:' + ($mq_min_xs * 1px) + ')';
+$min_sm: '(min-width:' + ($mq_min_sm * 1px) + ')';
+$min_md: '(min-width:' + ($mq_min_md * 1px) + ')';
+$min_lg: '(min-width:' + ($mq_min_lg * 1px) + ')';
+$min_xl: '(min-width:' + ($mq_min_xl * 1px) + ')';
+$min_xxl: '(min-width:' + ($mq_min_xxl * 1px) + ')';

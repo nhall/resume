@@ -317,19 +317,14 @@ template {
 ============================================================================= */
 @media (min-width:1220px) {
   .jobs {
-    margin-bottom: 80px;
+    margin-block-end: 80px;
   }
 }
 
 .jobs_title {
   font-weight: 700;
-  font-size: 12px;
+  font-size: clamp(14px, 9.8333333333px + (0.8333333333vw), 20px);
   letter-spacing: 0.5px;
-}
-@media (min-width:740px) {
-  .jobs_title {
-    font-size: 14px;
-  }
 }
 @media print {
   .jobs_title {
@@ -337,7 +332,8 @@ template {
   }
 }
 .jobs_title {
-  margin: 0 0 20px;
+  margin: 0;
+  margin-block-end: 20px;
 }
 @media print {
   .jobs_title {
@@ -346,25 +342,26 @@ template {
 }
 
 .jobs_list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  padding-left: 20px;
-}
-@media (min-width:500px) {
-  .jobs_list {
-    padding-left: 30px;
-  }
-}
-@media (min-width:740px) {
-  .jobs_list {
-    padding-left: 40px;
-  }
+  list-style: "";
+  margin-block: 0;
+  padding-inline-start: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(16px, 11.8333333333px + (0.8333333333vw), 22px);
+  line-height: clamp(1.5, 1.3263888889 + 0.0347222222vw / 1px, 1.75);
 }
 @media print {
   .jobs_list {
-    padding-left: 0;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
+.jobs_list {
+  position: relative;
+  padding-inline-start: clamp(20px, 6.1111111111px + (2.7777777778vw), 40px);
+}
+@media print {
+  .jobs_list {
+    padding-inline-start: 0;
   }
 }
 .jobs_list::before {
@@ -397,16 +394,12 @@ template {
 }
 
 .job {
-  margin: 0 0 40px;
-}
-@media (min-width:740px) {
-  .job {
-    margin-bottom: 60px;
-  }
+  margin: 0;
+  margin-block-end: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
 }
 @media print {
   .job {
-    margin-bottom: 20px;
+    margin-block-end: 20px;
   }
 }
 @media print {
@@ -418,7 +411,7 @@ template {
 @media (min-width:740px) {
   .job_inner {
     display: grid;
-    grid-gap: 40px;
+    grid-gap: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
     grid-template-columns: 35% 1fr;
   }
 }
@@ -431,26 +424,19 @@ template {
 }
 
 .job_header {
-  margin-bottom: 18px;
+  margin-block-end: 18px;
 }
 @media (min-width:740px) {
-  @supports (display: grid) {
-    .job_header {
-      margin-bottom: 0;
-    }
+  .job_header {
+    margin-block-end: 0;
   }
 }
 
 .job_title {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-weight: normal;
-  font-size: 20px;
+  font-size: clamp(20px, 14.4444444444px + (1.1111111111vw), 28px);
   line-height: 1.5;
-}
-@media (min-width:1220px) {
-  .job_title {
-    font-size: 24px;
-  }
 }
 @media print {
   .job_title {
@@ -458,7 +444,8 @@ template {
   }
 }
 .job_title {
-  margin: 0 0 2px;
+  margin: 0;
+  margin-block-end: 2px;
 }
 
 @media (min-width:740px) {
@@ -483,13 +470,8 @@ template {
 
 .job_location {
   font-weight: normal;
-  font-size: 12px;
+  font-size: clamp(14px, 9.8333333333px + (0.8333333333vw), 20px);
   letter-spacing: 0.5px;
-}
-@media (min-width:740px) {
-  .job_location {
-    font-size: 14px;
-  }
 }
 @media print {
   .job_location {
@@ -497,23 +479,19 @@ template {
   }
 }
 .job_location {
-  margin: 0 0 4px;
+  margin: 0;
+  margin-block-end: 4px;
 }
 @media print {
   .job_location {
-    margin-bottom: 2px;
+    margin-block-end: 2px;
   }
 }
 
 .job_time {
   font-weight: normal;
-  font-size: 12px;
+  font-size: clamp(14px, 9.8333333333px + (0.8333333333vw), 20px);
   letter-spacing: 0.5px;
-}
-@media (min-width:740px) {
-  .job_time {
-    font-size: 14px;
-  }
 }
 @media print {
   .job_time {
@@ -521,35 +499,32 @@ template {
   }
 }
 .job_time {
-  margin: 0 0 4px;
+  margin: 0;
+  margin-block-end: 4px;
 }
 @media print {
   .job_time {
-    margin-bottom: 2px;
+    margin-block-end: 2px;
   }
 }
 
 .job_highlights {
   list-style-type: disc;
-  padding-left: 20px;
+  padding-inline-start: 20px;
 }
 @media (min-width:740px), print and (min-width: 550px) {
   .job_highlights {
-    margin-left: -20px;
+    margin-inline-start: -20px;
   }
 }
 
 .job_highlight {
-  margin: 8px 0;
-}
-@media (min-width:1220px) {
-  .job_highlight {
-    margin: 20px 0;
-  }
+  margin-block: clamp(8px, -0.3333333333px + (1.6666666667vw), 20px);
+  margin-inline: 0;
 }
 @media print {
   .job_highlight {
-    margin: 4px 0;
+    margin-block: 4px;
   }
 }
 @media (min-width:740px), print and (min-width: 550px) {
@@ -569,19 +544,14 @@ template {
 ============================================================================= */
 @media (min-width:1220px) {
   .schools {
-    margin-bottom: 80px;
+    margin-block-end: 80px;
   }
 }
 
 .schools_title {
   font-weight: 700;
-  font-size: 12px;
+  font-size: clamp(14px, 9.8333333333px + (0.8333333333vw), 20px);
   letter-spacing: 0.5px;
-}
-@media (min-width:740px) {
-  .schools_title {
-    font-size: 14px;
-  }
 }
 @media print {
   .schools_title {
@@ -589,7 +559,8 @@ template {
   }
 }
 .schools_title {
-  margin: 0 0 20px;
+  margin: 0;
+  margin-block-end: 20px;
 }
 @media print {
   .schools_title {
@@ -598,22 +569,23 @@ template {
 }
 
 .school {
-  position: relative;
-  padding-left: 20px;
-}
-@media (min-width:500px) {
-  .school {
-    padding-left: 30px;
-  }
-}
-@media (min-width:740px) {
-  .school {
-    padding-left: 40px;
-  }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(16px, 11.8333333333px + (0.8333333333vw), 22px);
+  line-height: clamp(1.5, 1.3263888889 + 0.0347222222vw / 1px, 1.75);
 }
 @media print {
   .school {
-    padding-left: 0;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
+.school {
+  position: relative;
+  padding-inline-start: clamp(20px, 6.1111111111px + (2.7777777778vw), 40px);
+}
+@media print {
+  .school {
+    padding-inline-start: 0;
   }
 }
 .school::before {
@@ -645,22 +617,18 @@ template {
   }
 }
 .school {
-  margin: 0 0 40px;
-}
-@media (min-width:740px) {
-  .school {
-    margin-bottom: 60px;
-  }
+  margin: 0;
+  margin-block-end: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
 }
 @media print {
   .school {
-    margin-bottom: 20px;
+    margin-block-end: 20px;
   }
 }
 @media (min-width:740px) {
   .school {
     display: grid;
-    grid-gap: 40px;
+    grid-gap: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
     grid-template-columns: 35% 1fr;
   }
 }
@@ -673,26 +641,19 @@ template {
 }
 
 .school_header {
-  margin-bottom: 18px;
+  margin-block-end: 18px;
 }
 @media (min-width:740px) {
-  @supports (display: grid) {
-    .school_header {
-      margin-bottom: 0;
-    }
+  .school_header {
+    margin-block-end: 0;
   }
 }
 
 .school_name {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-weight: normal;
-  font-size: 20px;
+  font-size: clamp(20px, 14.4444444444px + (1.1111111111vw), 28px);
   line-height: 1.5;
-}
-@media (min-width:1220px) {
-  .school_name {
-    font-size: 24px;
-  }
 }
 @media print {
   .school_name {
@@ -700,18 +661,14 @@ template {
   }
 }
 .school_name {
-  margin: 0 0 2px;
+  margin: 0;
+  margin-block-end: 2px;
 }
 
 .school_location {
   font-weight: normal;
-  font-size: 12px;
+  font-size: clamp(14px, 9.8333333333px + (0.8333333333vw), 20px);
   letter-spacing: 0.5px;
-}
-@media (min-width:740px) {
-  .school_location {
-    font-size: 14px;
-  }
 }
 @media print {
   .school_location {
@@ -719,23 +676,19 @@ template {
   }
 }
 .school_location {
-  margin: 0 0 4px;
+  margin: 0;
+  margin-block-end: 4px;
 }
 @media print {
   .school_location {
-    margin-bottom: 2px;
+    margin-block-end: 2px;
   }
 }
 
 .school_time {
   font-weight: normal;
-  font-size: 12px;
+  font-size: clamp(14px, 9.8333333333px + (0.8333333333vw), 20px);
   letter-spacing: 0.5px;
-}
-@media (min-width:740px) {
-  .school_time {
-    font-size: 14px;
-  }
 }
 @media print {
   .school_time {
@@ -743,11 +696,12 @@ template {
   }
 }
 .school_time {
-  margin: 0 0 4px;
+  margin: 0;
+  margin-block-end: 4px;
 }
 @media print {
   .school_time {
-    margin-bottom: 2px;
+    margin-block-end: 2px;
   }
 }
 
@@ -759,19 +713,14 @@ template {
 ============================================================================= */
 @media (min-width:1220px) {
   .certifications {
-    margin-bottom: 80px;
+    margin-block-end: 80px;
   }
 }
 
 .certifications_title {
   font-weight: 700;
-  font-size: 12px;
+  font-size: clamp(14px, 9.8333333333px + (0.8333333333vw), 20px);
   letter-spacing: 0.5px;
-}
-@media (min-width:740px) {
-  .certifications_title {
-    font-size: 14px;
-  }
 }
 @media print {
   .certifications_title {
@@ -779,7 +728,8 @@ template {
   }
 }
 .certifications_title {
-  margin: 0 0 20px;
+  margin: 0;
+  margin-block-end: 20px;
 }
 @media print {
   .certifications_title {
@@ -788,22 +738,23 @@ template {
 }
 
 .certificate {
-  position: relative;
-  padding-left: 20px;
-}
-@media (min-width:500px) {
-  .certificate {
-    padding-left: 30px;
-  }
-}
-@media (min-width:740px) {
-  .certificate {
-    padding-left: 40px;
-  }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(16px, 11.8333333333px + (0.8333333333vw), 22px);
+  line-height: clamp(1.5, 1.3263888889 + 0.0347222222vw / 1px, 1.75);
 }
 @media print {
   .certificate {
-    padding-left: 0;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
+.certificate {
+  position: relative;
+  padding-inline-start: clamp(20px, 6.1111111111px + (2.7777777778vw), 40px);
+}
+@media print {
+  .certificate {
+    padding-inline-start: 0;
   }
 }
 .certificate::before {
@@ -835,16 +786,12 @@ template {
   }
 }
 .certificate {
-  margin: 0 0 40px;
-}
-@media (min-width:740px) {
-  .certificate {
-    margin-bottom: 60px;
-  }
+  margin: 0;
+  margin-block-end: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
 }
 @media print {
   .certificate {
-    margin-bottom: 20px;
+    margin-block-end: 20px;
   }
 }
 
@@ -852,19 +799,14 @@ template {
 ============================================================================= */
 @media (min-width:1220px) {
   .skills {
-    margin-bottom: 80px;
+    margin-block-end: 80px;
   }
 }
 
 .skills_title {
   font-weight: 700;
-  font-size: 12px;
+  font-size: clamp(14px, 9.8333333333px + (0.8333333333vw), 20px);
   letter-spacing: 0.5px;
-}
-@media (min-width:740px) {
-  .skills_title {
-    font-size: 14px;
-  }
 }
 @media print {
   .skills_title {
@@ -872,7 +814,8 @@ template {
   }
 }
 .skills_title {
-  margin: 0 0 20px;
+  margin: 0;
+  margin-block-end: 20px;
 }
 @media print {
   .skills_title {
@@ -881,22 +824,23 @@ template {
 }
 
 .skill {
-  position: relative;
-  padding-left: 20px;
-}
-@media (min-width:500px) {
-  .skill {
-    padding-left: 30px;
-  }
-}
-@media (min-width:740px) {
-  .skill {
-    padding-left: 40px;
-  }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(16px, 11.8333333333px + (0.8333333333vw), 22px);
+  line-height: clamp(1.5, 1.3263888889 + 0.0347222222vw / 1px, 1.75);
 }
 @media print {
   .skill {
-    padding-left: 0;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
+.skill {
+  position: relative;
+  padding-inline-start: clamp(20px, 6.1111111111px + (2.7777777778vw), 40px);
+}
+@media print {
+  .skill {
+    padding-inline-start: 0;
   }
 }
 .skill::before {
@@ -928,16 +872,12 @@ template {
   }
 }
 .skill {
-  margin: 0 0 40px;
-}
-@media (min-width:740px) {
-  .skill {
-    margin-bottom: 60px;
-  }
+  margin: 0;
+  margin-block-end: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
 }
 @media print {
   .skill {
-    margin-bottom: 20px;
+    margin-block-end: 20px;
   }
 }
 .skill {
@@ -953,7 +893,7 @@ template {
 ============================================================================= */
 @media (min-width:1220px) {
   .achievements {
-    margin-bottom: 80px;
+    margin-block-end: 80px;
   }
 }
 @media print {
@@ -964,13 +904,8 @@ template {
 
 .achievements_title {
   font-weight: 700;
-  font-size: 12px;
+  font-size: clamp(14px, 9.8333333333px + (0.8333333333vw), 20px);
   letter-spacing: 0.5px;
-}
-@media (min-width:740px) {
-  .achievements_title {
-    font-size: 14px;
-  }
 }
 @media print {
   .achievements_title {
@@ -978,7 +913,8 @@ template {
   }
 }
 .achievements_title {
-  margin: 0 0 20px;
+  margin: 0;
+  margin-block-end: 20px;
 }
 @media print {
   .achievements_title {
@@ -987,25 +923,26 @@ template {
 }
 
 .achievements_list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  padding-left: 20px;
-}
-@media (min-width:500px) {
-  .achievements_list {
-    padding-left: 30px;
-  }
-}
-@media (min-width:740px) {
-  .achievements_list {
-    padding-left: 40px;
-  }
+  list-style: "";
+  margin-block: 0;
+  padding-inline-start: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(16px, 11.8333333333px + (0.8333333333vw), 22px);
+  line-height: clamp(1.5, 1.3263888889 + 0.0347222222vw / 1px, 1.75);
 }
 @media print {
   .achievements_list {
-    padding-left: 0;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
+.achievements_list {
+  position: relative;
+  padding-inline-start: clamp(20px, 6.1111111111px + (2.7777777778vw), 40px);
+}
+@media print {
+  .achievements_list {
+    padding-inline-start: 0;
   }
 }
 .achievements_list::before {
@@ -1038,23 +975,19 @@ template {
 }
 
 .achievement {
-  margin: 0 0 40px;
-}
-@media (min-width:740px) {
-  .achievement {
-    margin-bottom: 60px;
-  }
+  margin: 0;
+  margin-block-end: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
 }
 @media print {
   .achievement {
-    margin-bottom: 20px;
+    margin-block-end: 20px;
   }
 }
 
 @media (min-width:740px) {
   .achievement_inner {
     display: grid;
-    grid-gap: 40px;
+    grid-gap: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
     grid-template-columns: 35% 1fr;
   }
 }
@@ -1067,19 +1000,14 @@ template {
 }
 
 .achievement_header {
-  margin-bottom: 18px;
+  margin-block-end: 18px;
 }
 
 .achievement_site {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-weight: normal;
-  font-size: 20px;
+  font-size: clamp(20px, 14.4444444444px + (1.1111111111vw), 28px);
   line-height: 1.5;
-}
-@media (min-width:1220px) {
-  .achievement_site {
-    font-size: 24px;
-  }
 }
 @media print {
   .achievement_site {
@@ -1087,36 +1015,27 @@ template {
   }
 }
 .achievement_site {
-  margin: 0 0 2px;
-}
-@media (min-width:740px) {
-  .achievement_site {
-    font-size: 18px;
-    line-height: 1.75;
-  }
+  margin: 0;
+  margin-block-end: 2px;
 }
 
 .awards {
   list-style-type: disc;
-  padding-left: 20px;
+  padding-inline-start: 20px;
 }
 @media (min-width:740px), print and (min-width: 550px) {
   .awards {
-    margin-left: -20px;
+    margin-inline-start: -20px;
   }
 }
 
 .award {
-  margin: 8px 0;
-}
-@media (min-width:1220px) {
-  .award {
-    margin: 20px 0;
-  }
+  margin-block: clamp(8px, -0.3333333333px + (1.6666666667vw), 20px);
+  margin-inline: 0;
 }
 @media print {
   .award {
-    margin: 4px 0;
+    margin-block: 4px;
   }
 }
 @media (min-width:740px) {
@@ -1136,7 +1055,7 @@ template {
 ============================================================================= */
 @media (min-width:1220px) {
   .references {
-    margin-bottom: 80px;
+    margin-block-end: 80px;
   }
 }
 @media screen {
@@ -1147,13 +1066,8 @@ template {
 
 .references_title {
   font-weight: 700;
-  font-size: 12px;
+  font-size: clamp(14px, 9.8333333333px + (0.8333333333vw), 20px);
   letter-spacing: 0.5px;
-}
-@media (min-width:740px) {
-  .references_title {
-    font-size: 14px;
-  }
 }
 @media print {
   .references_title {
@@ -1161,7 +1075,8 @@ template {
   }
 }
 .references_title {
-  margin: 0 0 20px;
+  margin: 0;
+  margin-block-end: 20px;
 }
 @media print {
   .references_title {
@@ -1170,22 +1085,23 @@ template {
 }
 
 .reference {
-  position: relative;
-  padding-left: 20px;
-}
-@media (min-width:500px) {
-  .reference {
-    padding-left: 30px;
-  }
-}
-@media (min-width:740px) {
-  .reference {
-    padding-left: 40px;
-  }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(16px, 11.8333333333px + (0.8333333333vw), 22px);
+  line-height: clamp(1.5, 1.3263888889 + 0.0347222222vw / 1px, 1.75);
 }
 @media print {
   .reference {
-    padding-left: 0;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+}
+.reference {
+  position: relative;
+  padding-inline-start: clamp(20px, 6.1111111111px + (2.7777777778vw), 40px);
+}
+@media print {
+  .reference {
+    padding-inline-start: 0;
   }
 }
 .reference::before {
@@ -1217,16 +1133,12 @@ template {
   }
 }
 .reference {
-  margin: 0 0 40px;
-}
-@media (min-width:740px) {
-  .reference {
-    margin-bottom: 60px;
-  }
+  margin: 0;
+  margin-block-end: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
 }
 @media print {
   .reference {
-    margin-bottom: 20px;
+    margin-block-end: 20px;
   }
 }
 
@@ -1284,18 +1196,8 @@ body {
 
 .resume {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-}
-@media (min-width:740px) {
-  .resume {
-    line-height: 1.75;
-  }
-}
-@media (min-width:1220px) {
-  .resume {
-    font-size: 18px;
-  }
+  font-size: clamp(16px, 11.8333333333px + (0.8333333333vw), 22px);
+  line-height: clamp(1.5, 1.3263888889 + 0.0347222222vw / 1px, 1.75);
 }
 @media print {
   .resume {
@@ -1304,34 +1206,23 @@ body {
   }
 }
 .resume {
-  --accent: #0065BD;
+  --accent: #0065bd;
+  min-inline-size: 320px;
   font-size: 16px;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
 }
 @media (prefers-color-scheme: dark) {
   .resume {
-    --accent: #E8AAA1;
+    --accent: #e8aaa1;
   }
 }
 
 .page {
   max-width: 1400px;
-  margin: 0 auto;
-  padding-right: 25px;
-  padding-left: 25px;
-}
-@media (min-width:500px) {
-  .page {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-}
-@media (min-width:740px) {
-  .page {
-    padding-right: 60px;
-    padding-left: 60px;
-  }
+  margin-block: 0;
+  margin-inline: auto;
+  padding-inline: clamp(25px, 0.6944444444px + (4.8611111111vw), 60px);
 }
 @media print {
   .page {
@@ -1376,21 +1267,9 @@ body {
 ============================================================================= */
 .header {
   max-width: 1400px;
-  margin: 0 auto;
-  padding-right: 25px;
-  padding-left: 25px;
-}
-@media (min-width:500px) {
-  .header {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-}
-@media (min-width:740px) {
-  .header {
-    padding-right: 60px;
-    padding-left: 60px;
-  }
+  margin-block: 0;
+  margin-inline: auto;
+  padding-inline: clamp(25px, 0.6944444444px + (4.8611111111vw), 60px);
 }
 @media print {
   .header {
@@ -1399,36 +1278,20 @@ body {
   }
 }
 .header {
-  margin: 20px 0;
-}
-@media (min-width:1220px) {
-  .header {
-    margin-bottom: 40px;
-  }
+  margin-block: clamp(20px, 6.1111111111px + (2.7777777778vw), 40px);
+  margin-inline: 0;
 }
 @media print {
   .header {
-    margin: 0 0 30px;
+    margin-block: 0 30px;
   }
 }
 
 .header_title {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-weight: normal;
-  font-size: 32px;
+  font-size: clamp(32px, 19.5px + (2.5vw), 50px);
   line-height: 1.25;
-}
-@media (min-width:740px) {
-  .header_title {
-    font-size: 38px;
-  }
-}
-@media (min-width:980px) {
-  .header_title {
-    font-size: 42px;
-  }
-}
-.header_title {
   margin: 0;
 }
 @media print {
@@ -1441,8 +1304,7 @@ body {
 ============================================================================= */
 .footer {
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-block: 20px;
 }
 @media print {
   .footer {
@@ -1474,21 +1336,9 @@ body {
 
 .footer_inner {
   max-width: 1400px;
-  margin: 0 auto;
-  padding-right: 25px;
-  padding-left: 25px;
-}
-@media (min-width:500px) {
-  .footer_inner {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-}
-@media (min-width:740px) {
-  .footer_inner {
-    padding-right: 60px;
-    padding-left: 60px;
-  }
+  margin-block: 0;
+  margin-inline: auto;
+  padding-inline: clamp(25px, 0.6944444444px + (4.8611111111vw), 60px);
 }
 @media print {
   .footer_inner {
@@ -1503,35 +1353,24 @@ body {
 }
 
 .connect_title {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.75;
 }
 @media (min-width:740px) {
   .connect_title {
-    line-height: 1.75;
-  }
-}
-@media (min-width:1220px) {
-  .connect_title {
-    font-size: 18px;
-  }
-}
-@media print {
-  .connect_title {
-    font-size: 10px;
-    line-height: 1.5;
+    font-size: 16px;
   }
 }
 .connect_title {
   font-weight: normal;
-  margin: 0 20px 0 0;
+  margin: 0;
+  margin-inline-end: 20px;
 }
 
 .connect_list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style: "";
+  margin-block: 0;
+  padding-inline-start: 0;
   display: flex;
 }
 

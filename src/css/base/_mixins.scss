@@ -1,4 +1,5 @@
 @use 'setup' as *;
+@use 'functions' as *;
 
 // =============================================================================
 // Mixins
@@ -10,43 +11,22 @@
 @mixin h1 {
 	@include serif(normal);
 
-	font-size: 32px;
+	font-size: base_clamp(32px, 50px);
 	line-height: 1.25;
-
-	@media #{$min_md} {
-		font-size: 38px;
-	}
-
-	@media #{$min_lg} {
-		font-size: 42px;
-	}
 }
 
 @mixin h2 {
 	@include serif(normal);
 
-	font-size: 28px;
+	font-size: base_clamp(28px, 46px);
 	line-height: 1.3;
-
-	@media #{$min_md} {
-		font-size: 32px;
-	}
-
-	@media #{$min_lg} {
-		font-size: 42px;
-		line-height: 1.25;
-	}
 }
 
 @mixin h3 {
 	@include serif(normal);
 
-	font-size: 20px;
+	font-size: base_clamp(20px, 28px);
 	line-height: 1.5;
-
-	@media #{$min_xl} {
-		font-size: 24px;
-	}
 
 	@media print {
 		font-size: 11px;
@@ -56,63 +36,36 @@
 @mixin h4 {
 	@include serif(normal);
 
-	font-size: 16px;
+	font-size: base_clamp(16px, 26px);
 	line-height: 1.4;
-
-	@media #{$min_md} {
-		font-size: 24px;
-		line-height: 1.33;
-	}
 }
 
 @mixin h5 {
 	@include serif(600);
 
-	font-size: 18px;
+	font-size: base_clamp(18px, 25px);
 	line-height: 1.5;
-
-	@media #{$min_md} {
-		font-size: 21px;
-		line-height: 1.4;
-	}
 }
 
 @mixin h6 {
 	@include serif(600);
 
-	font-size: 14px;
+	font-size: 24px;
 	letter-spacing: 1px;
 	line-height: 1.3;
-
-	@media #{$min_md} {
-		line-height: 1.4;
-	}
 }
 
 @mixin intro_text {
-	font-size: 18px;
+	font-size: base_clamp(18px, 26px);
 	font-weight: 500;
-	line-height: 1.4;
-
-	@media #{$min_md} {
-		font-size: 21px;
-		line-height: 1.7;
-	}
+	line-height: base_clamp(1.4, 1.7);
 }
 
 @mixin body_text {
 	@include sans();
 
-	font-size: 16px;
-	line-height: 1.5;
-
-	@media #{$min_md} {
-		line-height: 1.75;
-	}
-
-	@media #{$min_xl} {
-		font-size: 18px;
-	}
+	font-size: base_clamp(16px, 22px);
+	line-height: base_clamp(1.5, 1.75);
 
 	@media print {
 		font-size: 10px;
@@ -131,12 +84,8 @@
 
 @mixin label_text($weight: normal) {
 	font-weight: $weight;
-	font-size: 12px;
+	font-size: base_clamp(14px, 20px);
 	letter-spacing: 0.5px;
-
-	@media #{$min_md} {
-		font-size: 14px;
-	}
 
 	@media print {
 		font-size: 10px;
@@ -149,9 +98,9 @@
 }
 
 @mixin remove_list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+	list-style: '';
+	margin-block: 0;
+	padding-inline-start: 0;
 }
 
 @mixin visually_unhide() {
@@ -210,19 +159,9 @@
 @mixin landmark_padding {
 	max-width: 1400px;
 
-	margin: 0 auto;
-	padding-right: 25px;
-	padding-left: 25px;
-
-	@media #{$min_sm} {
-		padding-right: 40px;
-		padding-left: 40px;
-	}
-
-	@media #{$min_md} {
-		padding-right: 60px;
-		padding-left: 60px;
-	}
+	margin-block: 0;
+	margin-inline: auto;
+	padding-inline: base_clamp(25px, 60px);
 
 	@media print {
 		max-width: none;
@@ -233,14 +172,15 @@
 
 @mixin component {
 	@media #{$min_xl} {
-		margin-bottom: 80px;
+		margin-block-end: 80px;
 	}
 }
 
 @mixin component_title {
 	@include label_text(700);
 
-	margin: 0 0 20px;
+	margin: 0;
+	margin-block-end: 20px;
 
 	@media print {
 		margin-bottom: 4px;
@@ -248,20 +188,14 @@
 }
 
 @mixin component_body {
+	@include body_text;
+
 	position: relative;
 
-	padding-left: 20px;
-
-	@media #{$min_sm} {
-		padding-left: 30px;
-	}
-
-	@media #{$min_md} {
-		padding-left: 40px;
-	}
+	padding-inline-start: base_clamp(20px, 40px);
 
 	@media print {
-		padding-left: 0;
+		padding-inline-start: 0;
 	}
 
 	&::before {
@@ -296,7 +230,7 @@
 @mixin component_grid {
 	@media #{$min_md} {
 		display: grid;
-		grid-gap: 40px;
+		grid-gap: base_clamp(40px, 60px);
 		grid-template-columns: 35% 1fr;
 	}
 
@@ -308,64 +242,58 @@
 }
 
 @mixin component_item {
-	margin: 0 0 40px;
-
-	@media #{$min_md} {
-		margin-bottom: 60px;
-	}
+	margin: 0;
+	margin-block-end: base_clamp(40px, 60px);
 
 	@media print {
-		margin-bottom: 20px;
+		margin-block-end: 20px;
 	}
 }
 
 @mixin component_item_header {
-	margin-bottom: 18px;
+	margin-block-end: 18px;
 }
 
 @mixin component_grid_header {
 	@media #{$min_md} {
-		@supports (display: grid) {
-			margin-bottom: 0;
-		}
+		margin-block-end: 0;
 	}
 }
 
 @mixin component_item_title {
 	@include h3;
 
-	margin: 0 0 2px;
+	margin: 0;
+	margin-block-end: 2px;
 }
 
 @mixin component_item_subtitle {
 	@include label_text(normal);
 
-	margin: 0 0 4px;
+	margin: 0;
+	margin-block-end: 4px;
 
 	@media print {
-		margin-bottom: 2px;
+		margin-block-end: 2px;
 	}
 }
 
 @mixin component_list {
 	list-style-type: disc;
-	padding-left: 20px;
+	padding-inline-start: 20px;
 
 	@media #{$min_md},
 	print and (min-width: 550px) {
-		margin-left: -20px;
+		margin-inline-start: -20px;
 	}
 }
 
 @mixin component_list_item {
-	margin: 8px 0;
-
-	@media #{$min_xl} {
-		margin: 20px 0;
-	}
+	margin-block: base_clamp(8px, 20px);
+	margin-inline: 0;
 
 	@media print {
-		margin: 4px 0;
+		margin-block: 4px;
 	}
 }
 
