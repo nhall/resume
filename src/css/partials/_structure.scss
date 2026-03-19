@@ -71,7 +71,7 @@ body {
 .page {
 	@include landmark_padding;
 
-	margin-bottom: 80px;
+	margin-block-end: 80px;
 
 	a {
 		@include page_link;
@@ -115,12 +115,11 @@ body {
 	}
 
 	&::before {
-		height: 1px;
+		block-size: 1px;
 
 		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
+		inset-block-start: 0;
+		inset-inline: 0;
 
 		background-color: currentColor;
 		content: '';
@@ -167,7 +166,8 @@ body {
 .connect_link {
 	color: var(--accent);
 	display: block;
-	padding: 10px 20px;
+	padding-block: 10px;
+	padding-inline: 20px;
 	text-decoration: underline;
 	text-decoration-color: var(--accent);
 	text-decoration-thickness: 1px;
@@ -182,7 +182,7 @@ body {
 	}
 
 	&:first-child {
-		margin-left: -20px;
+		margin-inline-start: -20px;
 	}
 }
 

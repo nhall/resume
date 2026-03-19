@@ -87,7 +87,7 @@
 		@media #{$min_md},
 		print and (min-width: 550px) {
 			@supports (display: grid) {
-				margin-top: 0;
+				margin-block-start: 0;
 			}
 		}
 	}
@@ -96,7 +96,7 @@
 		&:last-of-type {
 			@media #{$min_md},
 			print and (min-width: 550px) {
-				margin-bottom: 0;
+				margin-block-end: 0;
 			}
 		}
 	}
@@ -183,10 +183,10 @@
 	@include component_body;
 	@include component_item;
 
-	max-width: 90ch;
+	max-inline-size: 90ch;
 
 	@media print {
-		max-width: none;
+		max-inline-size: none;
 	}
 }
 
@@ -239,7 +239,7 @@
 	&:first-of-type {
 		@media #{$min_md} {
 			@supports (display: grid) {
-				margin-top: 0;
+				margin-block-start: 0;
 			}
 		}
 	}
@@ -247,7 +247,7 @@
 	.achievement:last-of-type & {
 		&:last-of-type {
 			@media #{$min_md} {
-				margin-bottom: 0;
+				margin-block-end: 0;
 			}
 		}
 	}
