@@ -49,6 +49,9 @@
 		"serve": "^14.2.6",
 		"yargs": "^13.2.4"
 	},
+	"overrides": {
+		"undici": ">=6.24.0"
+	},
 	"browserslist": [
 		"last 3 Chrome versions",
 		"last 3 ChromeAndroid versions",
