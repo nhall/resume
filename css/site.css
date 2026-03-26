@@ -337,7 +337,7 @@ template {
 }
 @media print {
   .jobs_title {
-    margin-bottom: 4px;
+    margin-block-end: 4px;
   }
 }
 
@@ -365,11 +365,10 @@ template {
   }
 }
 .jobs_list::before {
-  width: 1px;
+  inline-size: 1px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  inset-block: 0;
+  inset-inline-start: 0;
   background-color: currentColor;
   content: "";
   opacity: 0.2;
@@ -411,14 +410,14 @@ template {
 @media (min-width:740px) {
   .job_inner {
     display: grid;
-    grid-gap: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
+    gap: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
     grid-template-columns: 35% 1fr;
   }
 }
 @media print and (min-width: 550px) {
   .job_inner {
     display: grid;
-    grid-gap: 40px;
+    gap: 40px;
     grid-template-columns: 25% 1fr;
   }
 }
@@ -530,13 +529,13 @@ template {
 @media (min-width:740px), print and (min-width: 550px) {
   @supports (display: grid) {
     .job_highlight:first-of-type {
-      margin-top: 0;
+      margin-block-start: 0;
     }
   }
 }
 @media (min-width:740px), print and (min-width: 550px) {
   .job:last-of-type .job_highlight:last-of-type {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
@@ -564,7 +563,7 @@ template {
 }
 @media print {
   .schools_title {
-    margin-bottom: 4px;
+    margin-block-end: 4px;
   }
 }
 
@@ -589,11 +588,10 @@ template {
   }
 }
 .school::before {
-  width: 1px;
+  inline-size: 1px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  inset-block: 0;
+  inset-inline-start: 0;
   background-color: currentColor;
   content: "";
   opacity: 0.2;
@@ -628,14 +626,14 @@ template {
 @media (min-width:740px) {
   .school {
     display: grid;
-    grid-gap: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
+    gap: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
     grid-template-columns: 35% 1fr;
   }
 }
 @media print and (min-width: 550px) {
   .school {
     display: grid;
-    grid-gap: 40px;
+    gap: 40px;
     grid-template-columns: 25% 1fr;
   }
 }
@@ -733,7 +731,7 @@ template {
 }
 @media print {
   .certifications_title {
-    margin-bottom: 4px;
+    margin-block-end: 4px;
   }
 }
 
@@ -758,11 +756,10 @@ template {
   }
 }
 .certificate::before {
-  width: 1px;
+  inline-size: 1px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  inset-block: 0;
+  inset-inline-start: 0;
   background-color: currentColor;
   content: "";
   opacity: 0.2;
@@ -819,7 +816,7 @@ template {
 }
 @media print {
   .skills_title {
-    margin-bottom: 4px;
+    margin-block-end: 4px;
   }
 }
 
@@ -844,11 +841,10 @@ template {
   }
 }
 .skill::before {
-  width: 1px;
+  inline-size: 1px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  inset-block: 0;
+  inset-inline-start: 0;
   background-color: currentColor;
   content: "";
   opacity: 0.2;
@@ -881,11 +877,11 @@ template {
   }
 }
 .skill {
-  max-width: 90ch;
+  max-inline-size: 90ch;
 }
 @media print {
   .skill {
-    max-width: none;
+    max-inline-size: none;
   }
 }
 
@@ -918,7 +914,7 @@ template {
 }
 @media print {
   .achievements_title {
-    margin-bottom: 4px;
+    margin-block-end: 4px;
   }
 }
 
@@ -946,11 +942,10 @@ template {
   }
 }
 .achievements_list::before {
-  width: 1px;
+  inline-size: 1px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  inset-block: 0;
+  inset-inline-start: 0;
   background-color: currentColor;
   content: "";
   opacity: 0.2;
@@ -987,14 +982,14 @@ template {
 @media (min-width:740px) {
   .achievement_inner {
     display: grid;
-    grid-gap: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
+    gap: clamp(40px, 26.1111111111px + (2.7777777778vw), 60px);
     grid-template-columns: 35% 1fr;
   }
 }
 @media print and (min-width: 550px) {
   .achievement_inner {
     display: grid;
-    grid-gap: 40px;
+    gap: 40px;
     grid-template-columns: 25% 1fr;
   }
 }
@@ -1041,13 +1036,13 @@ template {
 @media (min-width:740px) {
   @supports (display: grid) {
     .award:first-of-type {
-      margin-top: 0;
+      margin-block-start: 0;
     }
   }
 }
 @media (min-width:740px) {
   .achievement:last-of-type .award:last-of-type {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
@@ -1080,7 +1075,7 @@ template {
 }
 @media print {
   .references_title {
-    margin-bottom: 4px;
+    margin-block-end: 4px;
   }
 }
 
@@ -1105,11 +1100,10 @@ template {
   }
 }
 .reference::before {
-  width: 1px;
+  inline-size: 1px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  inset-block: 0;
+  inset-inline-start: 0;
   background-color: currentColor;
   content: "";
   opacity: 0.2;
@@ -1219,30 +1213,27 @@ body {
 }
 
 .page {
-  max-width: 1400px;
+  max-inline-size: 1400px;
   margin-block: 0;
   margin-inline: auto;
   padding-inline: clamp(25px, 0.6944444444px + (4.8611111111vw), 60px);
 }
 @media print {
   .page {
-    max-width: none;
+    max-inline-size: none;
     padding: 0;
   }
 }
 .page {
-  margin-bottom: 80px;
+  margin-block-end: 80px;
 }
 .page a {
   color: var(--accent);
   text-decoration: underline;
-  -webkit-text-decoration-color: var(--accent);
-          text-decoration-color: var(--accent);
+  text-decoration-color: var(--accent);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  transition: color 0.25s, -webkit-text-decoration-color 0.25s;
   transition: text-decoration-color 0.25s, color 0.25s;
-  transition: text-decoration-color 0.25s, color 0.25s, -webkit-text-decoration-color 0.25s;
 }
 @media print {
   .page a {
@@ -1251,14 +1242,12 @@ body {
   }
 }
 .page a:focus-visible {
-  -webkit-text-decoration-color: currentColor;
-          text-decoration-color: currentColor;
+  text-decoration-color: currentColor;
   color: inherit;
 }
 @media (hover: hover) {
   .page a:hover {
-    -webkit-text-decoration-color: currentColor;
-            text-decoration-color: currentColor;
+    text-decoration-color: currentColor;
     color: inherit;
   }
 }
@@ -1266,14 +1255,14 @@ body {
 /* Header
 ============================================================================= */
 .header {
-  max-width: 1400px;
+  max-inline-size: 1400px;
   margin-block: 0;
   margin-inline: auto;
   padding-inline: clamp(25px, 0.6944444444px + (4.8611111111vw), 60px);
 }
 @media print {
   .header {
-    max-width: none;
+    max-inline-size: none;
     padding: 0;
   }
 }
@@ -1312,11 +1301,10 @@ body {
   }
 }
 .footer::before {
-  height: 1px;
+  block-size: 1px;
   position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline: 0;
   background-color: currentColor;
   content: "";
   opacity: 0.1;
@@ -1335,14 +1323,14 @@ body {
 }
 
 .footer_inner {
-  max-width: 1400px;
+  max-inline-size: 1400px;
   margin-block: 0;
   margin-inline: auto;
   padding-inline: clamp(25px, 0.6944444444px + (4.8611111111vw), 60px);
 }
 @media print {
   .footer_inner {
-    max-width: none;
+    max-inline-size: none;
     padding: 0;
   }
 }
@@ -1377,28 +1365,24 @@ body {
 .connect_link {
   color: var(--accent);
   display: block;
-  padding: 10px 20px;
+  padding-block: 10px;
+  padding-inline: 20px;
   text-decoration: underline;
-  -webkit-text-decoration-color: var(--accent);
-          text-decoration-color: var(--accent);
+  text-decoration-color: var(--accent);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
-  transition: color 0.25s, -webkit-text-decoration-color 0.25s;
   transition: text-decoration-color 0.25s, color 0.25s;
-  transition: text-decoration-color 0.25s, color 0.25s, -webkit-text-decoration-color 0.25s;
 }
 .connect_link:focus-visible {
-  -webkit-text-decoration-color: currentColor;
-          text-decoration-color: currentColor;
+  text-decoration-color: currentColor;
   color: inherit;
 }
 @media (hover: hover) {
   .connect_link:hover {
-    -webkit-text-decoration-color: currentColor;
-            text-decoration-color: currentColor;
+    text-decoration-color: currentColor;
     color: inherit;
   }
 }
 .connect_link:first-child {
-  margin-left: -20px;
+  margin-inline-start: -20px;
 }
