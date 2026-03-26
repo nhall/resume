@@ -9,7 +9,7 @@
 	},
 	"scripts": {
 		"gulp": "gulp",
-		"build": "gulp build",
+		"build": "gulp build --production",
 		"dev": "gulp dev",
 		"test": "npx playwright test",
 		"test:headed": "npx playwright test --headed",
