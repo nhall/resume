@@ -1,5 +1,8 @@
 {
 	"name": "Nicholas Hall",
+	"summary": [
+		"Senior developer and digital accessibility lead with over twenty years of experience building for the web. CPACC-certified, with a deep focus on making even the most ambitious designs work for everyone. I lead by doing the work alongside my team, whether that's coaching developers, establishing standards, or leaning into AI-assisted tools that clear the repetitive hurdles so I can focus on the human work. At my core, I am a problem solver with a substantial disregard for the impossible."
+	],
 	"jobs": [
 		{
 			"position": "Digital Accessibility Lead",
@@ -8,6 +11,7 @@
 			"time": "2025-Present",
 			"points": [
 				"Spearhead company-wide accessibility practice, establishing standards, automated testing, and developer training",
+				"Use CPACC certification alongside years of practical experience to make sure accessibility recommendations actually work for real users",
 				"Consult directly with clients and their internal accessibility teams to assess compliance, define remediation strategies, and support VPAT documentation",
 				"Remediate front-end accessibility issues across multiple codebases, scanning tools, and frameworks, ranging from surface-level content fixes to complex structural overhauls",
 				"Translate complex or unconventional designs into fully accessible implementations without compromising creativity or user experience",
@@ -24,6 +28,7 @@
 				"Contributed to award-winning, fully accessible work for Ivy League institutions, top liberal arts colleges, and Fortune 500 clients, recognized by the Webby Awards, UCDA, CASE, and Davey Awards",
 				"Created an internal codebase focused on standardizing solutions and reducing the time needed to start new projects",
 				"Interviewed, onboarded, trained, and mentored new developers",
+				"Lead through hands-on code review and coaching developers at all experience levels",
 				"Developed, documented, and maintained code standards, making it easier to assist, review, and debug each other's work",
 				"Worked with the product team to identify potential issues with scope, accessibility, and project timeline",
 				"Teamed up with design and strategy to discover creative solutions to complex problems while achieving the desired user experience and sense of emotion"
@@ -77,9 +82,6 @@
 	},
 	"certifications": [
 		"Certified Professional in Accessibility Core Competencies <a href='https://www.accessibilityassociation.org/cpacccertification' target='_blank' rel='noopener nofollow noreferrer'>(CPACC)</a>"
-	],
-	"skills": [
-		"I maintain excellent written and oral communication skills as well as understanding and listening skills. I am passionate about my work, eager to learn, and pay attention to details. I am a problem solver with a substantial disregard for the impossible."
 	],
 	"achievements": [
 		{
