@@ -5,7 +5,7 @@ export default defineConfig({
 		baseURL: 'http://localhost:3000',
 	},
 	webServer: {
-		command: 'npx eleventy --serve --port=3000',
+		command: 'npx serve _site -p 3000 -s',
 		port: 3000,
 		reuseExistingServer: true,
 	},
