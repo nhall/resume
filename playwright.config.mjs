@@ -5,9 +5,10 @@ export default defineConfig({
 		baseURL: 'http://localhost:3000',
 	},
 	webServer: {
-		command: 'npx serve _site -p 3000 -s',
+		command: 'node test-server.mjs',
 		port: 3000,
 		reuseExistingServer: true,
+		timeout: 10000,
 	},
 	testDir: 'tests',
 	testMatch: '**/*.mjs',
