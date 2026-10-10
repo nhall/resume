@@ -36,8 +36,8 @@
 		"postcss": ">=8.5.23",
 		"markdown-it": ">=14.2.0",
 		"form-data": ">=4.0.6",
-		"gray-matter": { "js-yaml": "3.15.1" },
-		"@11ty/eleventy": { "js-yaml": "4.3.1" },
+		"gray-matter": { "js-yaml": "3.15.2" },
+		"@11ty/eleventy": { "js-yaml": "4.3.2" },
 		"ws": ">=8.21.0"
 	},
 	"browserslist": [
